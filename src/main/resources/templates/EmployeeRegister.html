@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Registration</title>
+</head>
+<body>
+	<h3>Employee Registration Form</h3>
+	<form action="save" method="post">
+		<pre>
+			NAME: <input type="text" name="eName"/>
+			
+			EMAIL: <input type="email" name="eMail"/>
+			
+			GENDER: <input type="radio" name="eGender" value="Male"/>Male
+				<input type="radio" name="eGender" value="FeMale"/>FeMale
+					
+			ADDRESS: <textarea name="eAddr"></textarea>
+			
+			PROJECTS: 
+						<select multiple="multiple" name="eProj">
+							<option value="NIT">NIT </option>
+							<option value="HTC">HTC </option>
+							<option value="XYZ">XYZ </option>
+						</select>
+						
+						
+			SLOTS: <input type="checkbox" name="eSlot" value="Shift-A">Shift-A
+					<input type="checkbox" name="eSlot" value="Shift-B">Shift-B
+					<input type="checkbox" name="eSlot" value="Shift-C">Shift-C
+					
+			<input type="submit" value="ADD EMPLOYEE">
+			
+		</pre>
+	</form>
+	<span th:text="${message}"></span>
+</body>
+
+</html>
